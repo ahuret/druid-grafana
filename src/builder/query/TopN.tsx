@@ -2,7 +2,7 @@ import React, { FC, PureComponent, ChangeEvent } from 'react';
 import { css } from 'emotion';
 import uniqueId from 'lodash/uniqueId';
 import { Button, Icon, LegacyForms, stylesFactory } from '@grafana/ui';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { DataSource } from '../datasource';
 import { Interval } from '../date';
 import { Granularity } from '../granularity';
@@ -59,7 +59,7 @@ const ComponentRow: FC<ComponentRowProps> = ({ index, component, props, onRemove
 
 ComponentRow.displayName = 'ComponentRow';
 
-export class TopN extends PureComponent<QueryBuilderProps, State> {
+export class TopN extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     components: { dimensions: [], aggregations: [], postAggregations: [], intervals: [], virtualColumns: [] },
   };

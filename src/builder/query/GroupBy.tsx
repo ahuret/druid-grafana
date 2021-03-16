@@ -3,7 +3,7 @@ import { css } from 'emotion';
 import uniqueId from 'lodash/uniqueId';
 import { Button, Icon, stylesFactory, MultiSelect } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { DataSource } from '../datasource';
 import { Dimension } from '../dimension';
 import { LimitSpec } from '../limitspec';
@@ -59,7 +59,7 @@ const ComponentRow: FC<ComponentRowProps> = ({ index, component, props, onRemove
 
 ComponentRow.displayName = 'ComponentRow';
 
-export class GroupBy extends PureComponent<QueryBuilderProps, State> {
+export class GroupBy extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     components: { dimensions: [], aggregations: [], postAggregations: [], intervals: [], subtotalsSpec: [] },
   };

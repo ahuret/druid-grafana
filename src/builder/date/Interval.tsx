@@ -1,5 +1,5 @@
 import React, { PureComponent, ChangeEvent } from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { css } from 'emotion';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -11,7 +11,7 @@ interface State {
   stopPlaceholder: string;
 }
 
-interface Props extends QueryBuilderProps {
+interface Props extends QueryBuilderComponentProps {
   label: string;
 }
 

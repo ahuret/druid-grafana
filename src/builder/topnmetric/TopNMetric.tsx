@@ -1,11 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { AlphaNumeric, Dimension, Inverted, Lexicographic, Numeric } from './';
 
 export const TopNMetric = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="TopNMetric"
+    {...props}
+    label="TopNMetric"
     components={{
       AlphaNumeric: AlphaNumeric,
       Dimension: Dimension,
@@ -13,6 +14,5 @@ export const TopNMetric = (props: QueryBuilderProps) => (
       Lexicographic: Lexicographic,
       Numeric: Numeric,
     }}
-    queryBuilderProps={props}
   />
 );

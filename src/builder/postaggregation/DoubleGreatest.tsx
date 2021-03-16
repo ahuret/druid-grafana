@@ -2,7 +2,7 @@ import React, { FC, PureComponent, ChangeEvent } from 'react';
 import { Button, Icon, LegacyForms, stylesFactory } from '@grafana/ui';
 import { css } from 'emotion';
 import uniqueId from 'lodash/uniqueId';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { PostAggregation } from './.';
 
 const { FormField } = LegacyForms;
@@ -51,7 +51,7 @@ const ComponentRow: FC<ComponentRowProps> = ({ index, component, props, onRemove
 
 ComponentRow.displayName = 'ComponentRow';
 
-export class DoubleGreatest extends PureComponent<QueryBuilderProps, State> {
+export class DoubleGreatest extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     components: [],
   };

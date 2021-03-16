@@ -1,7 +1,7 @@
 import { PureComponent } from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
-export class Version extends PureComponent<QueryBuilderProps> {
+export class Version extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     const { options, onOptionsChange } = props;

@@ -1,11 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { All, Contains, Fragment, InsensitiveContains, Regex } from './';
 
 export const SearchQuerySpec = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="SearchQuerySpec"
+    {...props}
+    label="SearchQuerySpec"
     components={{
       All: All,
       Contains: Contains,
@@ -13,6 +14,5 @@ export const SearchQuerySpec = (props: QueryBuilderProps) => (
       InsensitiveContains: InsensitiveContains,
       Regex: Regex,
     }}
-    queryBuilderProps={props}
   />
 );

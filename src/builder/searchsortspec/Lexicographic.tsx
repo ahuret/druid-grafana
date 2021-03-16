@@ -1,7 +1,7 @@
 import { PureComponent } from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
-export class Lexicographic extends PureComponent<QueryBuilderProps> {
+export class Lexicographic extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     const { options, onOptionsChange } = props;

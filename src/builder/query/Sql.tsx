@@ -1,9 +1,9 @@
 import React, { PureComponent, FormEvent, ChangeEvent } from 'react';
 import { css } from 'emotion';
 import { TextArea } from '@grafana/ui';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 
-export class Sql extends PureComponent<QueryBuilderProps> {
+export class Sql extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['queryType', 'query']);

@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { css } from 'emotion';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { DataSource } from '../datasource';
 
-export class DatasourceMetadata extends PureComponent<QueryBuilderProps> {
+export class DatasourceMetadata extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['queryType', 'dataSource']);

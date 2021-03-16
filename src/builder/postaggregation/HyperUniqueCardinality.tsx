@@ -1,11 +1,11 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 import { LegacyForms } from '@grafana/ui';
 import { css } from 'emotion';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
 const { FormField } = LegacyForms;
 
-export class HyperUniqueCardinality extends PureComponent<QueryBuilderProps> {
+export class HyperUniqueCardinality extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type', 'name', 'fieldName']);

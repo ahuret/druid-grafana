@@ -1,11 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { And, DimSelector, EqualTo, Filter, GreaterThan, LessThan, Not, Or } from './';
 
 export const HavingSpec = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="HavingSpec"
+    {...props}
+    label="HavingSpec"
     components={{
       And: And,
       DimSelector: DimSelector,
@@ -16,6 +17,5 @@ export const HavingSpec = (props: QueryBuilderProps) => (
       Not: Not,
       Or: Or,
     }}
-    queryBuilderProps={props}
   />
 );

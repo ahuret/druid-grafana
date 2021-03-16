@@ -1,37 +1,15 @@
-import React, { PureComponent } from 'react';
-import { css } from 'emotion';
+import React from 'react';
 import { QueryBuilderProps } from '../types';
+import { useScopedQueryBuilderProps } from '../abstract';
+import { InlineFieldRow } from '@grafana/ui';
 
-export class StrLen extends PureComponent<QueryBuilderProps> {
-  constructor(props: QueryBuilderProps) {
-    super(props);
-    this.resetBuilder(['type']);
-    const { builder } = props.options;
-    builder.type = 'strlen';
-  }
+export const StrLen = (props: QueryBuilderProps) => {
+  const scopedProps = useScopedQueryBuilderProps(props, StrLen);
+  const options,
+    onOptionsChange = scopedProps(undefined);
+  onOptionsChange(options);
 
-  resetBuilder = (properties: string[]) => {
-    const { builder } = this.props.options;
-    for (let key of Object.keys(builder)) {
-      if (!properties.includes(key)) {
-        delete builder[key];
-      }
-    }
-  };
-
-  render() {
-    return (
-      <>
-        <div className="gf-form">
-          <div
-            className={css`
-              width: 300px;
-            `}
-          >
-            Returns the length of dimension values (as if they were encoded in UTF-16)
-          </div>
-        </div>
-      </>
-    );
-  }
-}
+  return <InlineFieldRow>Returns the length of dimension values (as if they were encoded in UTF-16)</InlineFieldRow>;
+};
+StrLen.type = 'strlen';
+StrLen.fields = [];

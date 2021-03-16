@@ -1,11 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { Default, Extraction, ListFiltered, Lookup, RegisteredLookup, PrefixFiltered, RegexFiltered } from './';
 
 export const Dimension = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="Dimension"
+    {...props}
+    label="Dimension"
     components={{
       Default: Default,
       Extraction: Extraction,
@@ -15,6 +16,5 @@ export const Dimension = (props: QueryBuilderProps) => (
       PrefixFiltered: PrefixFiltered,
       RegexFiltered: RegexFiltered,
     }}
-    queryBuilderProps={props}
   />
 );

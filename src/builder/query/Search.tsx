@@ -2,7 +2,7 @@ import React, { FC, PureComponent, ChangeEvent } from 'react';
 import { css } from 'emotion';
 import uniqueId from 'lodash/uniqueId';
 import { Button, Icon, LegacyForms, stylesFactory } from '@grafana/ui';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { DataSource } from '../datasource';
 import { Granularity } from '../granularity';
 import { Filter } from '../filter';
@@ -57,7 +57,7 @@ const ComponentRow: FC<ComponentRowProps> = ({ index, component, props, onRemove
 
 ComponentRow.displayName = 'ComponentRow';
 
-export class Search extends PureComponent<QueryBuilderProps, State> {
+export class Search extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     components: { intervals: [], searchDimensions: [] },
   };

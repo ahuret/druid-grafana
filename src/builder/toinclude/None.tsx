@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { css } from 'emotion';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
-export class None extends PureComponent<QueryBuilderProps> {
+export class None extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type']);

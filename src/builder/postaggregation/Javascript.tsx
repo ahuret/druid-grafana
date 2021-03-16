@@ -2,11 +2,11 @@ import React, { PureComponent, FormEvent, ChangeEvent } from 'react';
 import { MultiSelect, TextArea, LegacyForms } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
 import { css } from 'emotion';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
 const { FormField } = LegacyForms;
 
-export class Javascript extends PureComponent<QueryBuilderProps> {
+export class Javascript extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type', 'name', 'fieldNames', 'function']);

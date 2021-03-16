@@ -1,11 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { AlphaNumeric, Lexicographic, Numeric, StrLen, Version } from './';
 
 export const SearchSortSpec = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="SearchSortSpec"
+    {...props}
+    label="SearchSortSpec"
     components={{
       AlphaNumeric: AlphaNumeric,
       Lexicographic: Lexicographic,
@@ -13,6 +14,5 @@ export const SearchSortSpec = (props: QueryBuilderProps) => (
       StrLen: StrLen,
       Version: Version,
     }}
-    queryBuilderProps={props}
   />
 );

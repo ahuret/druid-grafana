@@ -2,9 +2,9 @@ import React, { PureComponent, ChangeEvent } from 'react';
 import { Checkbox, MultiSelect } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
 import { css } from 'emotion';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
-export class Fragment extends PureComponent<QueryBuilderProps> {
+export class Fragment extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type', 'case_sensitive', 'values']);

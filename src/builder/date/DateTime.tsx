@@ -1,5 +1,5 @@
 import React, { PureComponent, ChangeEvent } from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -8,7 +8,7 @@ interface State {
   datePlaceholder: string;
 }
 
-interface Props extends QueryBuilderProps {
+interface Props extends QueryBuilderComponentProps {
   label: string;
 }
 

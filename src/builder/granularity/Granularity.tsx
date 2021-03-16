@@ -1,12 +1,12 @@
 import React from 'react';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 import { QueryBuilderComponentSelector } from '../abstract';
 import { Duration, Period, Simple } from './';
 
 export const Granularity = (props: QueryBuilderProps) => (
   <QueryBuilderComponentSelector
-    name="Granularity"
+    {...props}
+    label="Granularity"
     components={{ Duration: Duration, Period: Period, Simple: Simple }}
-    queryBuilderProps={props}
   />
 );

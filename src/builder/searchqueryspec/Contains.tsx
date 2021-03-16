@@ -1,11 +1,11 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 import { Checkbox, LegacyForms } from '@grafana/ui';
 import { css } from 'emotion';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
 const { FormField } = LegacyForms;
 
-export class Contains extends PureComponent<QueryBuilderProps> {
+export class Contains extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type', 'case_sensitive', 'value']);

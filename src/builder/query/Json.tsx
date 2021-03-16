@@ -1,13 +1,13 @@
 import React, { PureComponent, FormEvent } from 'react';
 import { css } from 'emotion';
 import { TextArea } from '@grafana/ui';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
 interface State {
   json: string;
 }
 
-export class Json extends PureComponent<QueryBuilderProps, State> {
+export class Json extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     json: '',
   };

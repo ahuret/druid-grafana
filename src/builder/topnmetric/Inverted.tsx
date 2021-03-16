@@ -1,9 +1,9 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 import { css } from 'emotion';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { TopNMetric } from './';
 
-export class Inverted extends PureComponent<QueryBuilderProps> {
+export class Inverted extends PureComponent<QueryBuilderComponentProps> {
   constructor(props: QueryBuilderProps) {
     super(props);
     this.resetBuilder(['type', 'metric']);

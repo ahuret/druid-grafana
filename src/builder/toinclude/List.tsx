@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 import { css } from 'emotion';
 import { MultiSelect } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
-import { QueryBuilderProps } from '../types';
+import { QueryBuilderComponentProps } from '../abstract';
 
-export class List extends PureComponent<QueryBuilderProps> {
+export class List extends PureComponent<QueryBuilderComponentProps> {
   multiSelectOptions: Record<string, Array<SelectableValue<string>>> = { columns: [] };
 
   constructor(props: QueryBuilderProps) {

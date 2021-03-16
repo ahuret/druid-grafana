@@ -3,7 +3,7 @@ import { css } from 'emotion';
 import uniqueId from 'lodash/uniqueId';
 import { Button, Icon, Select, MultiSelect, LegacyForms, stylesFactory } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
-import { QueryBuilderProps, QueryBuilderOptions } from '../types';
+import { QueryBuilderComponentProps, QueryBuilderOptions } from '../types';
 import { DataSource } from '../datasource';
 import { Filter } from '../filter';
 import { VirtualColumn } from '../virtualcolumn';
@@ -55,7 +55,7 @@ const ComponentRow: FC<ComponentRowProps> = ({ index, component, props, onRemove
 
 ComponentRow.displayName = 'ComponentRow';
 
-export class Scan extends PureComponent<QueryBuilderProps, State> {
+export class Scan extends PureComponent<QueryBuilderComponentProps, State> {
   state: State = {
     components: { intervals: [], virtualColumns: [] },
   };

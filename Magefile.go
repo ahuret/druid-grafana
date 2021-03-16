@@ -123,6 +123,7 @@ func (Frontend) Build() error {
 		return err
 	}
 
+	//return runToolboxCmd("npx", "@grafana/toolkit", "plugin:build", "--preserveConsole")
 	return runToolboxCmd("npx", "@grafana/toolkit", "plugin:build")
 }
 
