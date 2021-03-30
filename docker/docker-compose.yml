@@ -43,12 +43,13 @@ services:
       - broker
     env_file:
       - ./grafana/environment
-    image: grafana/grafana:${GRAFANA_VERSION}
+    image: grafana/grafana:7.5.0
     ports:
       - 3000:3000
     restart: on-failure
     user: root
     volumes:
+      - ../alexandra-trackmap-panel/dist:/var/lib/grafana/plugins/alexandra-trackmap-panel
       - ../dist:/var/lib/grafana/plugins/druid-grafana
       - ./grafana/dashboards:/etc/grafana/dashboards
       - ./grafana/provisioning:/etc/grafana/provisioning
